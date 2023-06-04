@@ -134,7 +134,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
  */
 
 .header-desktop{
-    background:#0da8e4;
+    background:#c7d6c2;
     -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
     -moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
     box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
@@ -250,7 +250,7 @@ input.au-input.au-input-xl{
 }
 
 .total{
-    background:#205b8d;
+    background:#126e53;
     line-height:43px;
     color:#fff;
     border-radius:30px;
@@ -283,11 +283,11 @@ input.au-input.au-input-xl{
     right:0;
     min-width:95px;
     color:#fff;
-    border:1px solid #205b8d;
+    border:1px solid #28c97e;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
     border-radius:43px;
-    background:#205b8d
+    background:#389b6c
 }
 
 .au-btn-submit:hover{
@@ -319,7 +319,7 @@ input.au-input.au-input-xl{
     left:0;
     top:0;
     bottom:0;
-    background:#fff;
+    background:#c7d6c2;
     overflow-y:auto
 }
 
@@ -542,7 +542,7 @@ input.au-input.au-input-xl{
 .price{
     margin:15px 0 0;
     font-weight:800;
-    color:#0da8e4
+    color:#1c832d
 }
 .product-box h1{
     font-size:18px;
@@ -766,8 +766,10 @@ footer ul li a{
 footer{
     background:#232324;
     z-index:1;
-    position:relative;
-    text-align:center
+    position: fixed;
+    text-align:center;
+    bottom:0px;
+    width: 100%;
 }
 footer li a{
     color:#313131;
@@ -986,7 +988,7 @@ footer ul li{
         right:10px;
         min-width:85px;
         color:#fff;
-        border:1px solid #205b8d;
+        border:1px solid #208d25;
         -webkit-border-radius:3px;
         -moz-border-radius:3px;
         border-radius:0;
