@@ -1,7 +1,7 @@
 <table class="table">
-    <thead class="table-light" >
-        <tr  >
-            <th>Filters</th> 
+    <thead class="table-light">
+        <tr>
+            <th>Filters</th>
         </tr>
     </thead>
 </table>
@@ -15,13 +15,17 @@
                 <div *ngFor="let tempProduct of products" class="col-md-3">
                     <div class="product-box">
                         <img src="{{tempProduct.imageUrl}}" class="img-responsive">
-                        <h1>{{tempProduct.name}}</h1> 
+                        <h1>{{tempProduct.name}}</h1>
                         <p>{{tempProduct.description}} </p>
-                        <div class="price">{{tempProduct.unitPrice | currency:'₺'}}</div> 
+                        <div class="price">{{tempProduct.unitPrice | currency:'₺'}}</div>
                         <a href="#" class="primary-btn">Add to cart</a>
                     </div>
                 </div>
 
+                <!--IF PRODUCTS EMPTY THEN DISPLAY A MESSAGE-->
+                <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                    No products found.
+                </div>
             </div>
         </div>
     </div>
