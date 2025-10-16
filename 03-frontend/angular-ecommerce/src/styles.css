@@ -522,18 +522,49 @@ input.au-input.au-input-xl{
  * Products List
  * ----------------------------
  */
-
-.product-box img {
-    width: 150px;
+ 
+.product-box {
+  border-radius: 16px;                 /* yuvarlatılmış köşeler */
+  padding: 20px;                       /* yazılara nefes alanı */
+  transition: transform 0.3s ease, 
+              box-shadow 0.3s ease,
+              padding 0.3s ease;
 }
 
+.product-box h1,
+.product-box h2,
+.product-box .price {
+  transition: transform 0.3s ease;
+}
+
+.product-box img {
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto; /* ortala */
+}
+
+.product-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  padding: 24px; /* hover'da biraz içeri girsin */
+}
+
+.product-box:hover img {
+  transform: scale(1.05); /* foto küçülüp içeri giriyor */
+}
+
+.product-box:hover h1,
+.product-box:hover h2,
+.product-box:hover .price {
+  transform: scale(1.05); /* yazılar da biraz küçülüyor */
+}
 .items select {
     width: 100px;
     height: 40px;
     border-radius: 40px;
     padding-left: 15px;
     margin-bottom: 10px;
-    outline: 0;
+    outline: 10;
     margin-left: 5px;
 }
 .product-box{
@@ -733,31 +764,40 @@ table.table.table-bordered th{
  * Buttons
  * ----------------------------
  */
-
- .btn-info{
-    color:#fff;
-    background-color:#0da8e4!important;
-    border-color:#0da8e4!important
-}
-a.primary-btn{
-    background:#05143f;
-    padding:7px 20px;
-    text-align:center;
-    display:inline-block;
-    color:#fff;
-    border-radius:2px;
-    font-size:14px;
-    margin-top:5px
-}
-a.primary-btn:hover{
-    background:#0da8e4;
-    color:#fff
+.navbar-sidebar .navbar-list li {
+  margin-bottom: 6px; /* liste araları nefes alsın */
 }
 
+.navbar-sidebar .navbar-list li a,
+a.primary-btn {
+  display: contents;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;        /* köşeler yumuşak */
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.navbar-sidebar .navbar-list li a:hover,
+a.primary-btn:hover {
+  background: #22854f;       /* hover rengi */
+  color: #fff;
+  border-color: #22854f;
+  transform: translateX(4px); /* hafif sağa kayma efekti */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* aktif link belirginliği */
 .active-link {
-  font-weight: bold;
+  background: #22854f !important;
+  color: #fff !important;
+  font-weight: 600;
 }
-
 /* 
  * ----------------------------
  * Footer section
